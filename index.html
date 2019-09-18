@@ -10,7 +10,10 @@
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
         <script>
             ReactDOM.render(
-                React.createElement('h1', null, 'React Quick'),
+                React.createElement(React.Fragment, null, [
+                    React.createElement('h1', {key: 'title'}, 'React Quick'),
+                    React.createElement('p', {key: 'description'}, 'This page is to demonstrate a quick react setup!')
+                ]),
                 document.getElementById("app")
             );
         </script>
